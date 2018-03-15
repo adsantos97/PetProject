@@ -1,6 +1,10 @@
 =begin
-Hello! This is a small Ruby guide to help you program in Ruby!
+Hello! This is a small Ruby guide to help you get started in Ruby!
 Ruby was made to be easy to read and write--it looks like regular English!
+
+Note:
+There are many ways of accomplishing a given task in Ruby. (see loops &
+iterations)
 =end
 
 # This is a single-line comment
@@ -79,17 +83,17 @@ else
 end
 
 #loops and iterators
-counter = 1
-while counter < 11
-  puts counter
-  counter = counter + 1
+i = 3
+while i > 0 do
+  print i
+  i -= 1
 end
 
-i = 0
-until i == 6
-  i = i + 1
+j = 3
+until j == 0 do
+  print j
+  j -= 1
 end
-puts i
 
 for num in 1...10
   puts num
@@ -102,4 +106,22 @@ loop do
   print "#{i} "
   break if i <= 0
 end
+
+array = [1,2,3,4,5]
+array.each do |x|
+  x += 10
+  print "#{x}"
+end
+
+10.times { print "dead beef"}
+
+# hashes
+hash = {
+  "key1" => 1,
+  "key2" => 2,
+  "key3" => 3
+}
+
+pets = Hash.new
+pets["Stevie"] = "cat" #hash[key] = value
 
