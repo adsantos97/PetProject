@@ -52,8 +52,11 @@ instance variables
 class variables
     - two "at" signs followed by a name (@@sign, @@Counter)
 
+class names
+    - camelcase
+
 global variables
-    - start with a dollar sign followed by a name (#counter)
+    - start with a dollar sign followed by a name ($counter)
 
 *constants start with an uppercase letter followed by name
 =end
@@ -125,3 +128,7 @@ hash = {
 pets = Hash.new
 pets["Stevie"] = "cat" #hash[key] = value
 
+# defining methods
+def add(a, b)
+  return a + b
+end
