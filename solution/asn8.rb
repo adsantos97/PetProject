@@ -3,57 +3,43 @@ Arizza Santos
 CS451 Pet Program
 Solution
 =end
-require Store
-
-def add
-  puts "What is the title of the movie you want to add?"
-  title = gets.chomp
-  puts "What is the ratings of the movie you want to add?"
-  rating = get.chomp
-  
-end
-
-def update
-  puts "update!"
-end
-
-def display
-  puts "display!"
-end
-
-def delete
-  puts "delete!"
-end
+require './store'
 
 def usage
   puts "-- Type 'add' to add a movie."
   puts "-- Type 'update' to update a movie."
   puts "-- Type 'display' to display all movie."
-  puts "-- Type 'delete' to delete a movie."
-  puts "-- Type 'quit' to delete a movie."
+  puts "-- Type 'remove' to remove a movie."
+  puts "-- Type 'four' for a surprise."
+  puts "-- Type 'quit' to quit."
 end
 
 def main
   continue = true
+  store = Store.new
 
-    puts "Personal Movie Store"
-    puts "What would you like to do?"
-    usage
+  puts "Personal Movie Store"
+  puts "What would you like to do?"
+  usage
 
   while continue
     choice = gets.chomp.downcase
     case choice
     when "add"
-      add
+      store.add_movie
       puts "----------"
     when "update"
-      update
+      store.update_movie
       puts "----------"
     when "display"
-      display
+      store.display_movie
       puts "----------"
-    when "delete"
-      delete
+    when "remove"
+      store.remove_movie
+      puts "----------"
+    when "four"
+      mine = Proc.new { puts " is MINE!" }
+      store.four_rating_movie mine
       puts "----------"
     when "quit"
       puts "Aww...bye bye!"
