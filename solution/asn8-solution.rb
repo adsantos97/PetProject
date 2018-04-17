@@ -3,7 +3,7 @@ Arizza Santos
 CS451 Pet Program
 Solution
 =end
-require './store'
+require './store-solution'
 
 def usage
   puts "-- Type 'add' to add a movie."
