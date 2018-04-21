@@ -23,7 +23,7 @@ def main
   usage
 
   # handle program operations here
-  # with the help of using the Store class
+  # using the Store class
 
 end
 
